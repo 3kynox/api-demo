@@ -4,7 +4,11 @@ namespace ContactBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
+use ApiPlatform\Builder\Annotation\Resource;
 
+/**
+ * @Resource()
+ */
 abstract class Contact
 {
     private $id;

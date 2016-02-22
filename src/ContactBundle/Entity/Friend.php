@@ -3,7 +3,11 @@
 namespace ContactBundle\Entity;
 
 use Symfony\Component\Serializer\Annotation\Groups;
+use ApiPlatform\Builder\Annotation\Resource;
 
+/**
+ * @Resource(attributes={"normalization_context"={"groups": {"contacts"}}, "denormalization_context"={"groups": {"contacts"}}})
+ */
 class Friend extends Contact
 {
     /**

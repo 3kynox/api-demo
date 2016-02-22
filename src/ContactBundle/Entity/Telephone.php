@@ -3,7 +3,11 @@
 namespace ContactBundle\Entity;
 
 use Symfony\Component\Serializer\Annotation\Groups;
+use ApiPlatform\Builder\Annotation\Resource;
 
+/**
+ * @Resource()
+ */
 class Telephone extends CommunicationWay
 {
     /**

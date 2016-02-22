@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a45e1813905b15d804538e8a329fef4e",
-    "content-hash": "3dc97e789b196bcc41c957f3eb18cdc5",
+    "hash": "d0938c312ddefb6e85c294f90be286aa",
+    "content-hash": "9f5cf084c5df34d28f6e36bc3461cbb5",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -775,28 +775,24 @@
         },
         {
             "name": "dunglas/api-bundle",
-            "version": "v1.1.0-beta.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dunglas/DunglasApiBundle.git",
-                "reference": "6fb3ea4ec5d5cf4b68f80d81ebc4f4bce4c41071"
+                "reference": "bb72d0569aaf51420c1b8cfc5b653fa7053ffdfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dunglas/DunglasApiBundle/zipball/6fb3ea4ec5d5cf4b68f80d81ebc4f4bce4c41071",
-                "reference": "6fb3ea4ec5d5cf4b68f80d81ebc4f4bce4c41071",
+                "url": "https://api.github.com/repos/dunglas/DunglasApiBundle/zipball/bb72d0569aaf51420c1b8cfc5b653fa7053ffdfb",
+                "reference": "bb72d0569aaf51420c1b8cfc5b653fa7053ffdfb",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "~1.0",
-                "dunglas/php-property-info": "~0.2",
-                "ocramius/proxy-manager": "~1.0",
-                "php": ">=5.5",
-                "phpdocumentor/reflection": "^1.0.7",
-                "symfony/framework-bundle": "~2.6|~3.0",
-                "symfony/proxy-manager-bridge": "~2.3|~3.0",
-                "symfony/serializer": "^2.7.2|~3.0",
-                "symfony/validator": "~2.5|~3.0"
+                "php": ">=7.0",
+                "symfony/http-foundation": "~2.3",
+                "symfony/serializer": "~3.1@dev",
+                "willdurand/negotiation": "~1.4"
             },
             "require-dev": {
                 "behat/behat": "~3.0",
@@ -804,16 +800,20 @@
                 "behat/mink-browserkit-driver": "~1.1",
                 "behat/mink-extension": "~2.0",
                 "behat/symfony2-extension": "~2.0",
-                "behatch/contexts": "dev-master#eef7ab39ca896796bf3ba25a0fa5a95f15276eb7",
-                "doctrine/doctrine-bundle": "~1.2",
+                "behatch/contexts": "dev-master",
+                "doctrine/doctrine-bundle": "dev-property_info",
                 "doctrine/orm": "~2.2,>=2.2.3",
-                "friendsofsymfony/user-bundle": "~1.3",
-                "php-mock/php-mock-phpunit": "^0.3",
-                "phpunit/phpunit": "~4.6",
-                "symfony/finder": "~2.3"
+                "friendsofsymfony/user-bundle": "~2.0@dev",
+                "php-mock/php-mock-phpunit": "~1.1",
+                "phpdocumentor/reflection": "^1.0.7",
+                "symfony/dependency-injection": "~2.8@dev",
+                "symfony/finder": "~2.3",
+                "symfony/framework-bundle": "~3.1@dev",
+                "symfony/property-info": "~3.1@dev",
+                "symfony/security": "~2.7|~3.0",
+                "symfony/validator": "~2.5|~3.0"
             },
             "suggest": {
-                "doctrine/doctrine-bundle": "To use the Doctrine ORM bridge.",
                 "friendsofsymfony/user-bundle": "To use the FOSUserBundle bridge."
             },
             "type": "symfony-bundle",
@@ -824,7 +824,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Dunglas\\ApiBundle\\": ""
+                    "ApiPlatform\\Builder\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -835,11 +835,11 @@
                 {
                     "name": "Kévin Dunglas",
                     "email": "dunglas@gmail.com",
-                    "homepage": "http://dunglas.fr"
+                    "homepage": "https://dunglas.fr"
                 }
             ],
             "description": "JSON-LD / Hydra REST API for Symfony",
-            "homepage": "http://api-platform.com",
+            "homepage": "https://api-platform.com",
             "keywords": [
                 "Hydra",
                 "JSON-LD",
@@ -847,62 +847,7 @@
                 "json",
                 "rest"
             ],
-            "time": "2015-11-21 15:26:32"
-        },
-        {
-            "name": "dunglas/php-property-info",
-            "version": "v0.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dunglas/php-property-info.git",
-                "reference": "698a5fa4f3901dba31e9163599aa9d4fdbf88f1a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dunglas/php-property-info/zipball/698a5fa4f3901dba31e9163599aa9d4fdbf88f1a",
-                "reference": "698a5fa4f3901dba31e9163599aa9d4fdbf88f1a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "doctrine/orm": "~2.3",
-                "phpdocumentor/reflection": "~1.0",
-                "phpspec/phpspec": "~2.1"
-            },
-            "suggest": {
-                "doctrine/orm": "To use Doctrine metadata",
-                "phpdocumentor/reflection": "To use the PHPDoc",
-                "symfony/validator": "To use Symfony validator metadata"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "PropertyInfo\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kévin Dunglas",
-                    "email": "dunglas@gmail.com"
-                }
-            ],
-            "description": "Retrieve type and description of PHP properties using various sources ",
-            "homepage": "http://dunglas.fr",
-            "keywords": [
-                "doctrine",
-                "phpdoc",
-                "property",
-                "symfony",
-                "type",
-                "validator"
-            ],
-            "time": "2015-12-29 08:21:00"
+            "time": "2016-02-19 11:35:46"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1168,69 +1113,6 @@
                 "php"
             ],
             "time": "2014-07-23 18:24:17"
-        },
-        {
-            "name": "ocramius/proxy-manager",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Ocramius/ProxyManager.git",
-                "reference": "57e9272ec0e8deccf09421596e0e2252df440e11"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/57e9272ec0e8deccf09421596e0e2252df440e11",
-                "reference": "57e9272ec0e8deccf09421596e0e2252df440e11",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "zendframework/zend-code": ">2.2.5,<3.0"
-            },
-            "require-dev": {
-                "ext-phar": "*",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "1.5.*"
-            },
-            "suggest": {
-                "ocramius/generated-hydrator": "To have very fast object to array to object conversion for ghost objects",
-                "zendframework/zend-json": "To have the JsonRpc adapter (Remote Object feature)",
-                "zendframework/zend-soap": "To have the Soap adapter (Remote Object feature)",
-                "zendframework/zend-stdlib": "To use the hydrator proxy",
-                "zendframework/zend-xmlrpc": "To have the XmlRpc adapter (Remote Object feature)"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "ProxyManager\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com",
-                    "homepage": "http://ocramius.github.com/"
-                }
-            ],
-            "description": "A library providing utilities to generate, instantiate and generally operate with Object Proxies",
-            "homepage": "https://github.com/Ocramius/ProxyManager",
-            "keywords": [
-                "aop",
-                "lazy loading",
-                "proxy",
-                "proxy pattern",
-                "service proxies"
-            ],
-            "time": "2015-08-09 04:28:19"
         },
         {
             "name": "paragonie/random_compat",
@@ -2141,6 +2023,73 @@
             "time": "2015-12-28 09:39:09"
         },
         {
+            "name": "symfony/serializer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/serializer.git",
+                "reference": "d0d3fc44d4488cf6a63961354069337dfc64f531"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/d0d3fc44d4488cf6a63961354069337dfc64f531",
+                "reference": "d0d3fc44d4488cf6a63961354069337dfc64f531",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "doctrine/annotations": "~1.0",
+                "doctrine/cache": "~1.0",
+                "symfony/cache": "~3.1",
+                "symfony/config": "~2.8|~3.0",
+                "symfony/http-foundation": "~2.8|~3.0",
+                "symfony/property-access": "~2.8|~3.0",
+                "symfony/yaml": "~2.8|~3.0"
+            },
+            "suggest": {
+                "doctrine/annotations": "For using the annotation mapping. You will also need doctrine/cache.",
+                "doctrine/cache": "For using the default cached annotation reader and metadata cache.",
+                "psr/cache-implementation": "For using the metadata cache.",
+                "symfony/config": "For using the XML mapping loader.",
+                "symfony/http-foundation": "To use the DataUriNormalizer.",
+                "symfony/property-access": "For using the ObjectNormalizer.",
+                "symfony/yaml": "For using the default YAML mapping loader."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Serializer\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Serializer Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-02-19 10:48:56"
+        },
+        {
             "name": "symfony/swiftmailer-bundle",
             "version": "v2.3.11",
             "source": {
@@ -2392,110 +2341,53 @@
             "time": "2016-01-25 21:22:18"
         },
         {
-            "name": "zendframework/zend-code",
-            "version": "2.6.2",
+            "name": "willdurand/negotiation",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zendframework/zend-code.git",
-                "reference": "c4e8f976a772cfb14b47dabd69b5245a423082b4"
+                "url": "https://github.com/willdurand/Negotiation.git",
+                "reference": "2a59f2376557303e3fa91465ab691abb82945edf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/c4e8f976a772cfb14b47dabd69b5245a423082b4",
-                "reference": "c4e8f976a772cfb14b47dabd69b5245a423082b4",
+                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/2a59f2376557303e3fa91465ab691abb82945edf",
+                "reference": "2a59f2376557303e3fa91465ab691abb82945edf",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5",
-                "zendframework/zend-eventmanager": "^2.6|^3.0"
-            },
-            "require-dev": {
-                "doctrine/annotations": "~1.0",
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0",
-                "zendframework/zend-stdlib": "~2.7"
-            },
-            "suggest": {
-                "doctrine/annotations": "Doctrine\\Common\\Annotations >=1.0 for annotation features",
-                "zendframework/zend-stdlib": "Zend\\Stdlib component"
+                "php": ">=5.3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev",
-                    "dev-develop": "2.7-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Zend\\Code\\": "src/"
+                    "Negotiation\\": "src/Negotiation"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
-            "description": "provides facilities to generate arbitrary code using an object oriented interface",
-            "homepage": "https://github.com/zendframework/zend-code",
-            "keywords": [
-                "code",
-                "zf2"
-            ],
-            "time": "2016-01-05 05:58:37"
-        },
-        {
-            "name": "zendframework/zend-eventmanager",
-            "version": "3.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-eventmanager.git",
-                "reference": "5c80bdee0e952be112dcec0968bad770082c3a6e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/5c80bdee0e952be112dcec0968bad770082c3a6e",
-                "reference": "5c80bdee0e952be112dcec0968bad770082c3a6e",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5 || ^7.0"
-            },
-            "require-dev": {
-                "athletic/athletic": "^0.1",
-                "container-interop/container-interop": "^1.1.0",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "^2.0",
-                "zendframework/zend-stdlib": "^2.7.3 || ^3.0"
-            },
-            "suggest": {
-                "container-interop/container-interop": "^1.1.0, to use the lazy listeners feature",
-                "zendframework/zend-stdlib": "^2.7.3 || ^3.0, to use the FilterChain feature"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev",
-                    "dev-develop": "3.1-dev"
+            "authors": [
+                {
+                    "name": "William Durand",
+                    "email": "william.durand1@gmail.com"
                 }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\EventManager\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
             ],
-            "description": "Trigger and listen to events within a PHP application",
-            "homepage": "https://github.com/zendframework/zend-eventmanager",
+            "description": "Content Negotiation tools for PHP provided as a standalone library.",
+            "homepage": "http://williamdurand.fr/Negotiation/",
             "keywords": [
-                "event",
-                "eventmanager",
-                "events",
-                "zf2"
+                "accept",
+                "content",
+                "format",
+                "header",
+                "negotiation"
             ],
-            "time": "2016-02-18 20:53:00"
+            "time": "2015-10-01 07:42:40"
         }
     ],
     "packages-dev": [
@@ -2610,7 +2502,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "dunglas/api-bundle": 10
+        "symfony/serializer": 20,
+        "dunglas/api-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
