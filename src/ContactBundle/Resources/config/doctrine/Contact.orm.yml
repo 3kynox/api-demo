@@ -1,5 +1,13 @@
 ContactBundle\Entity\Contact:
-    type: mappedSuperclass
+    type: entity
+
+    inheritanceType: JOINED
+    discriminatorColumn:
+        name: type
+        type: integer
+    discriminatorMap:
+        1: Friend
+        2: Ennemy
 
     id:
         id:
@@ -19,17 +27,10 @@ ContactBundle\Entity\Contact:
         birthDate:
             type: date
 
-    manyToMany:
+    oneToMany:
         commWay:
             targetEntity: CommunicationWay
-            joinTable:
-                name: contact_commway
-                joinColumns:
-                    contact_id:
-                        referencedColumnName: id
-                inverseJoinColumns:
-                    contact_id:
-                        referencedColumnName: id
-            cascade: [ persist, merge, detach ]
+            mappedBy: contact
+            cascade: [ persist, remove ]
 
     lifecycleCallbacks: {  }

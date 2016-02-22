@@ -17,4 +17,9 @@ ContactBundle\Entity\CommunicationWay:
             generator:
                 strategy: AUTO
 
+    manyToOne:
+        contact:
+            targetEntity: Contact
+            inversedBy: commWay
+
     lifecycleCallbacks: {  }

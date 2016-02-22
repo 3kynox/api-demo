@@ -5,7 +5,7 @@ namespace ContactBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
 
-class Contact
+abstract class Contact
 {
     private $id;
 

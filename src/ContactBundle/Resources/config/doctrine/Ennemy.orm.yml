@@ -1,17 +1,6 @@
 ContactBundle\Entity\Ennemy:
     type: entity
 
-    associationOverride:
-        commWay:
-            joinTable:
-                name: ennemy_commway
-                joinColumns:
-                    ennemy_id:
-                        referencedColumnName: id
-                inverseJoinColumns:
-                    commWay_id:
-                        referencedColumnName: id
-
     fields:
         ennemySince:
             type: date

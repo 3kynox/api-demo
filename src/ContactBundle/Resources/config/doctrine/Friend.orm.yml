@@ -1,17 +1,6 @@
 ContactBundle\Entity\Friend:
     type: entity
 
-    associationOverride:
-        commWay:
-            joinTable:
-                name: friend_commway
-                joinColumns:
-                    friend_id:
-                        referencedColumnName: id
-                inverseJoinColumns:
-                    commWay_id:
-                        referencedColumnName: id
-
     fields:
         friendSince:
             type: date
