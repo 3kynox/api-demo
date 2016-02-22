@@ -2,7 +2,6 @@
 
 namespace ContactBundle\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 class Contact
@@ -27,12 +26,7 @@ class Contact
     /**
      * @Groups({"contacts"})
      */
-    private $commWay;
-
-    public function __construct()
-    {
-        $this->commWay = new ArrayCollection();
-    }
+    private $tabCommWays;
 
     public function getId()
     {
@@ -74,19 +68,13 @@ class Contact
         return $this->birthDate;
     }
 
-    public function addCommWay(CommunicationWay $commWay)
+    public function setTabCommWays($tabCommWays)
     {
-        $this->commWay[] = $commWay;
-        return $this;
+        $this->tabCommWays = $tabCommWays;
     }
 
-    public function removeCommWay(CommunicationWay $commWay)
+    public function getTabCommWays()
     {
-        $this->commWay->removeElement($commWay);
-    }
-
-    public function getCommWay()
-    {
-        return $this->commWay;
+        return $this->tabCommWays;
     }
 }

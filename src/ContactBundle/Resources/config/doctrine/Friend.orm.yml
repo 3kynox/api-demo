@@ -2,15 +2,16 @@ ContactBundle\Entity\Friend:
     type: entity
 
     associationOverride:
-        commWay:
+        tabCommWays:
             joinTable:
-                name: friend_commway
+                name: friend_tabcommways
                 joinColumns:
                     friend_id:
                         referencedColumnName: id
                 inverseJoinColumns:
-                    commWay_id:
+                    tabCommWays_id:
                         referencedColumnName: id
+            cascade: [ persist, merge, detach ]
 
     fields:
         friendSince:

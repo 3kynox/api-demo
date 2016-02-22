@@ -28,6 +28,11 @@ services:
               arguments:  [{ groups: [ "contacts" ] }]
         tags:      [ { name: "api.resource" } ]
 
+    resource.tabcommway:
+        parent:    "api.resource"
+        arguments: [ "ContactBundle\\Entity\\TabCommWay" ]
+        tags:      [ { name: "api.resource" } ]
+
     resource.communicationway:
         parent:    "api.resource"
         arguments: [ "ContactBundle\\Entity\\CommunicationWay" ]

@@ -2,15 +2,16 @@ ContactBundle\Entity\Ennemy:
     type: entity
 
     associationOverride:
-        commWay:
+        tabCommWays:
             joinTable:
-                name: ennemy_commway
+                name: ennemy_tabcommways
                 joinColumns:
                     ennemy_id:
                         referencedColumnName: id
                 inverseJoinColumns:
-                    commWay_id:
+                    tabCommWays_id:
                         referencedColumnName: id
+            cascade: [ persist, merge, detach ]
 
     fields:
         ennemySince:

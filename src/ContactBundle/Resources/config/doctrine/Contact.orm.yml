@@ -19,17 +19,12 @@ ContactBundle\Entity\Contact:
         birthDate:
             type: date
 
-    manyToMany:
-        commWay:
-            targetEntity: CommunicationWay
-            joinTable:
-                name: contact_commway
-                joinColumns:
-                    contact_id:
-                        referencedColumnName: id
-                inverseJoinColumns:
-                    contact_id:
-                        referencedColumnName: id
+    oneToOne:
+        tabCommWays:
+            targetEntity: TabCommWay
+            joinColumn:
+                name: tabCommWays_id
+                referencedColumnName: id
             cascade: [ persist, merge, detach ]
 
     lifecycleCallbacks: {  }

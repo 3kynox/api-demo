@@ -1,0 +1,51 @@
+ContactBundle\Entity\TabCommWay:
+    type: entity
+
+    manyToMany:
+        telephones:
+            targetEntity: Telephone
+            joinTable:
+                name: tabCommWay_telephones
+                joinColumns:
+                    tabCommWay_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    telephone_id:
+                        referencedColumnName: id
+                        unique: true
+            cascade: [ persist, merge, detach ]
+
+        emails:
+            targetEntity: Email
+            joinTable:
+                name: tabCommWay_emails
+                joinColumns:
+                    tabCommWay_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    email_id:
+                        referencedColumnName: id
+                        unique: true
+            cascade: [ persist, merge, detach ]
+
+        adresses:
+            targetEntity: Adress
+            joinTable:
+                name: tabCommWay_adresses
+                joinColumns:
+                    tabCommWay_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    adress_id:
+                        referencedColumnName: id
+                        unique: true
+            cascade: [ persist, merge, detach ]
+
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+    lifecycleCallbacks: {  }
