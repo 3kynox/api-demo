@@ -5,3 +5,4 @@ API-Platform Demo Project
 - API-1 branch transform Contact Class as an Entity and relations to Friend/Ennemy as JOINED type
 - API-2 branch is a hack using another TabCommWays class to give a way using POST Request with nested Contact objects
 - API-3 branch using Api-platform project V2
+- API-4 still with V2, but with mappedSuperclass entities (like master branch mapping)
