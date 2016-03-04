@@ -4,7 +4,7 @@ namespace ContactBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
-use ApiPlatform\Builder\Annotation\Resource;
+use ApiPlatform\Core\Annotation\Resource;
 
 /**
  * @Resource()

@@ -3,7 +3,7 @@
 namespace ContactBundle\Entity;
 
 use Symfony\Component\Serializer\Annotation\Groups;
-use ApiPlatform\Builder\Annotation\Resource;
+use ApiPlatform\Core\Annotation\Resource;
 
 /**
  * @Resource(attributes={"normalization_context"={"groups": {"contacts"}}, "denormalization_context"={"groups": {"contacts"}}})

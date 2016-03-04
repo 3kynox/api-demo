@@ -3,7 +3,7 @@
 namespace ContactBundle\Entity;
 
 use Symfony\Component\Serializer\Annotation\Groups;
-use ApiPlatform\Builder\Annotation\Resource;
+use ApiPlatform\Core\Annotation\Resource;
 
 /**
  * @Resource()

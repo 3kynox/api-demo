@@ -23,7 +23,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "symfony/serializer": "~3.1@dev",
         "dunglas/api-bundle": "dev-master",
-        "phpdocumentor/reflection": "^1.0"
+        "phpdocumentor/reflection-docblock": "~3.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
