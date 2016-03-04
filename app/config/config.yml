@@ -66,6 +66,6 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
 
-dunglas_api:
+api_platform:
     title:       "%api_name%"
     description: "%api_description%"
