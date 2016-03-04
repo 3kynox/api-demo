@@ -4,10 +4,12 @@ namespace ContactBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
+use ApiPlatform\Core\Annotation\Iri;
+use ApiPlatform\Core\Annotation\Property;
 use ApiPlatform\Core\Annotation\Resource;
 
 /**
- * @Resource()
+ * @Resource
  */
 abstract class Contact
 {
